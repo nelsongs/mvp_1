@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Projeto Catalogação de Filmes</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Cabeçalho de informações do sistema -->
+        <header>
+            <h1>Projeto Catalogação de Filmes - MoviesLib</h1>
+        </header>
+
+        <div class="input-dados">
+            <input type="text" id="input-titulo" placeholder="Título do filme:">
+            <br><br>
+            <input type="text" list="tipos" name="tipo" id="input-tipo" placeholder="Tipo do filme">
+            <datalist id="tipos"> 
+                <option value="Ação">
+                <option value="Aventura">
+                <option value="Biografia">
+                <option value="Comédia">
+                <option value="Comédia Romântica">
+                <option value="Documentário">
+                <option value="Drama">
+                <option value="Faroeste">
+                <option value="Guerra">
+                <option value="Fantasia">
+                <option value="Ficção Científica">
+                <option value="Histórico">
+                <option value="Musical">
+                <option value="Romance">
+                <option value="Suspense">
+                <option value="Terror">
+            </datalist>
+            
+            <input type="text" list="medias" name="media" id="input-media" placeholder="Mídia">
+            <datalist id="medias"> 
+                <option value="DVD">
+                <option value="Blu-Ray">
+                <option value="Blu-Ray 3D + Blu-Ray">     
+                <option value="HDD">
+                <option value="AppleTV">
+                <option value="AmazonPrime">
+                <option value="ClaroNOW">
+            </datalist>
+            <br><br>
+            <textarea rows="10", cols=70" maxlength="2000" id="input-info" placeholder="Informações sobre o filme"></textarea>
+            <br><br>
+            <span onclick="newMovie()" class="insert-btn">Inserir</span>
+            <span onclick="closeApp()" class="close-btn">Sair</span>
+        </div> 
+             
+        <div class="show-dados">
+            <table id="filmes-table">
+                <tr class="tr-caput">
+                    <th id="th-titulo">Título</th>
+                    <th id="th-tipo">Tipo</th>
+                    <th id="th-media">Media</th>
+                    <th id="th-info">Info</th>
+                    <th id="th-del"><img src="img/lixeira_icon.png" width="15px" height="15px">
+                </tr>
+            </table>
+        </div>
+
+        <script src="scripts.js"></script>
+        
+        <footer>
+            <h5>Trabalho MVP1 - Eng SW PUC Rio 2023</h5>
+            <h6><a href="#">Aluno: Nelson Gomes da Silveira</a></h6>
+        </footer>
+    </div> <!--container-->
+    <!--    <th id="del"><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px"></th> -->
+</body>
+</html>
